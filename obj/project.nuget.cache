@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SUVP99NJ5pg=",
+  "dgSpecHash": "c9Mq9vVD2mFxJJcdzLZGLugj58SUaaTzSS+zAgtlqg+Tz7leUi1xOoa/83ZT8L4peHWNNh5NHXyaNoAVaAv3rQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\andre\\Desktop\\SemesterProjekt\\WorldOfWarTerCraft-\\WorldOfWarTerCraft-.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/quan/Dokumenter/cs/WorldOfWarTerCraft-/WorldOfWarTerCraft-.csproj",
+  "expectedPackageFiles": [
+    "/home/quan/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
+  ],
   "logs": []
 }

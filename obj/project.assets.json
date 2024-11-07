@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\andre\\.nuget\\packages\\": {}
+    "/home/quan/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\Desktop\\SemesterProjekt\\WorldOfWarTerCraft-\\WorldOfWarTerCraft-.csproj",
+      "projectUniqueName": "/home/quan/Dokumenter/cs/WorldOfWarTerCraft-/WorldOfWarTerCraft-.csproj",
       "projectName": "WorldOfWarTerCraft-",
-      "projectPath": "C:\\Users\\andre\\Desktop\\SemesterProjekt\\WorldOfWarTerCraft-\\WorldOfWarTerCraft-.csproj",
-      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\Desktop\\SemesterProjekt\\WorldOfWarTerCraft-\\obj\\",
+      "projectPath": "/home/quan/Dokumenter/cs/WorldOfWarTerCraft-/WorldOfWarTerCraft-.csproj",
+      "packagesPath": "/home/quan/.nuget/packages/",
+      "outputPath": "/home/quan/Dokumenter/cs/WorldOfWarTerCraft-/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/quan/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -38,11 +38,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -59,12 +54,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.10, 8.0.10]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
