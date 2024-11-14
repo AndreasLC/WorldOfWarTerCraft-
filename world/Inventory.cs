@@ -1,66 +1,36 @@
-using System.Security.Cryptography;
-
-public class Inventory 
-{
-// Atributes 
-    private Item[] Items;
+public class Inventory {
 // Constructor 
-public Inventory (Item[] Items) 
-{
-    this.Items = Items;
-}
-static string PrintDashes(int length)
-    {
-        return new string('-', length);
-    }
+    private List<Item> items = new List<Item>();
 
-    // Inventory display
+// Methods
+    //Display inventory
     public void InventoryDisplay()
-    {        
+    {
+    //Display        
     Console.WriteLine("Inventory:");
-        for (int i = 0; i < Items.Length; i++)
+    Console.WriteLine("Name \t\t Description");
+    Console.WriteLine(new string('-', 44));
+        foreach (var item in items)
         {
-            // Makes sure it only prints Item in inventory if there are any.
-            if (Items[i] != null)
-            {
-                Console.WriteLine("Inventory:");
-                Console.WriteLine("Name \t\t Effect \t Description");
-                Console.WriteLine(PrintDashes(44));
-                Console.WriteLine(Items[i]);
-            }
-            else if (Items[i]==null) 
-            {
-                Console.WriteLine("Inventory was empty");
-                break; 
-            }
+            Console.WriteLine(item);
+        }
+        if (!items.Any())
+        {
+            Console.WriteLine("Inventory was empty");
         }
         Console.WriteLine();  
     }
+    //Adds new item to inventory
+    public void AddItem (Item newItem) 
+    {   
+        //If items list doesn't contain newItem, add to inventory and display message
+        if (newItem != null && !items.Contains(newItem)) {
+            items.Add(newItem);
+            Console.WriteLine($"Congratulations! {newItem.GetName()} has been added to your inventory.");
 
-public void AddItem (Item NewItem) 
-{
-    for (int i = 0 ; i< Items.Length;i++)
-    {
-        
-            // Checks if there is place for a new item
-            if(Items[i]==null)
-            {
-                Items[i] = NewItem;
-                break; 
-            }
-        
-    }
-}
-public bool HasItem(int keyNumber)
-{
-    foreach (Item item in Items)
-    {
-        if (item != null && item.GetID() == keyNumber)
-        {
-            return true;
         }
-    } 
-    return false; 
-}
-
+    }
+    public bool HasItem(int keyNumber) {
+        return items.Any(item => item.GetItemID() == keyNumber);
+        } 
 }
