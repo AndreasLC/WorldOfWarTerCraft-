@@ -6,11 +6,8 @@ class CommandInventory : BaseCommand, ICommand
     //Display inventory
     public void Execute(Context context, string command, string[] parameters)
     {
-    //Creates inventory array
-    Item[] Items = new Item[9];
-    
-    Inventory inventory = new (Items);
+        Inventory inventory = context.PlayerInventory;
 
-    inventory.InventoryDisplay(); 
+        inventory.InventoryDisplay();
     }
 }
