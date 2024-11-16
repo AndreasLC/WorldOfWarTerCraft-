@@ -36,21 +36,23 @@ class Challenge {
     public void BeginChallenge(Challenge challenge) {
         ShuffleQuestions();
         foreach (var question in questions) {
-            question.QuestionDisplay();
-            int inputUser = GetInputUser();
-            if (question.IsCorrect(inputUser)){
-                Item rewardItem = GetNextPredefinedItem();
-                Console.WriteLine($"Your knowledge is increasing, you succesfully picked up the trash!");
-                context.PlayerInventory.AddItem(rewardItem);
-                context.PlayerInventory.InventoryDisplay();
-                Console.WriteLine();
+            bool answeredCorrectly = false;
+            while(!answeredCorrectly){
+                question.QuestionDisplay();
+                int inputUser = GetInputUser();
+                if (question.IsCorrect(inputUser)){
+                    Item rewardItem = GetNextPredefinedItem();
+                    Console.WriteLine($"Your knowledge is increasing, you succesfully picked up the trash!");
+                    context.PlayerInventory.AddItem(rewardItem);
+                    context.PlayerInventory.InventoryDisplay();
+                    Console.WriteLine();
+                    answeredCorrectly = true;
+                }
+                else {
+                    Console.WriteLine("Incorrect, try again!");
+                    //(Add a function here subtracting hp)
+                }
             }
-            else {
-                Console.WriteLine("Incorrect, try again!");
-                //(Add a function here subtracting hp)
-            }
-
-            //Add hp checker here, for ending game if hp == 0
         }
     }
 
@@ -81,7 +83,7 @@ class Challenge {
                 break;
             }
             else {
-                throw new Exception("Try again, please enter a number between 1 and 5.");
+                Console.WriteLine("Try again, please enter a number between 1 and 5.");
             }
         }
         return choice;
