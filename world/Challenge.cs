@@ -33,7 +33,7 @@ class Challenge {
     }
 
 
-    public void BeginChallenge(Context context) {
+    public void BeginChallenge(Challenge challenge) {
         ShuffleQuestions();
         foreach (var question in questions) {
             question.QuestionDisplay();

@@ -27,10 +27,10 @@ class Space : Node {
         }
     }
 
-  public void StartChallenge(Context context) {
+  public void StartChallenge(Challenge challenge) {
     if (challenge != null) {
       Console.WriteLine("You have found a new challenge!");
-      challenge.BeginChallenge(context);
+      challenge.BeginChallenge(challenge);
     }
     else
       return;
@@ -49,8 +49,8 @@ class Space : Node {
     Console.WriteLine($"You are now at {name}");
     DisplayExits();
     if (challenge != null) {
-      ;
-    }
+      StartChallenge(challenge);
+      };
     ListNPCs();
   }
   
