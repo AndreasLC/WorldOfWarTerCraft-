@@ -21,6 +21,6 @@ public class Question {
     }
 
     public bool IsCorrect(int choice) {
-        return choice == correctAnswer + 1;
+        return choice == correctAnswer;
     }
 }
