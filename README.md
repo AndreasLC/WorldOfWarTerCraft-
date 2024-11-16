@@ -1,5 +1,5 @@
 Beskrivelse af spil: 
-Situationen med plast i verdenshavene spidser til og livet i havet tager langsomt skade. Det handler om forurening i havet, specifikt affald. Alt dette skaber ubalance i havet og gør nærmest det at leve i havet som et havdyr til en krigszone; hermed kom navnet “World of WarTercraft”.
+Situationen med plast i verdenshavene spidser til og livet i havet tager langsomt skade. Det handler om forurening i havet, specifikt affald. Alt dette skaber ubalance i havet og gør nærmest det at leve i havet som et havdyr til en krigszone; hermed kom navnet “World of WaterTrash”.
 
 Spillet skal sætte i perspektiv de farer og problemer der forekommer af forurening i havet. Der bliver taget udgangspunkt i et fiktivt hav, der simulerer en situation, baseret på aktuelle statistikker. Spillet har til formål ultimativt at vise hvad man som menneske kan gøre for at afhjælpe situationen og hvordan det kan forbedres yderligere.
 
