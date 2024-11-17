@@ -1,6 +1,4 @@
-/* Command for transitioning between spaces
- */
-
+/* Command for transitioning between spaces */
 class CommandGo : BaseCommand, ICommand {
   public CommandGo () {
     description = "Follow an exit";

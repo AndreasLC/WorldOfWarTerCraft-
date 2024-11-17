@@ -1,5 +1,4 @@
-/* Help command
- */
+/* Help command */
 
 class CommandHelp : BaseCommand, ICommand {
   Registry registry;
@@ -13,14 +12,14 @@ class CommandHelp : BaseCommand, ICommand {
     string[] commandNames = registry.GetCommandNames();
     Array.Sort(commandNames);
     
-    // find max length of command name
+    // Find max length of command name
     int max = 0;
     foreach (String commandName in commandNames) {
       int length = commandName.Length;
       if (length>max) max = length;
     }
     
-    // present list of commands
+    // Present list of commands
     Console.WriteLine("Commands:");
     foreach (String commandName in commandNames) {
       string description = registry.GetCommand(commandName).GetDescription();

@@ -11,6 +11,7 @@ class Registry {
     this.fallback = fallback;
   }
   
+  // Adds new commands
   public void Register (string name, ICommand command) {
     commands.Add(name, command);
   }
@@ -30,8 +31,7 @@ class Registry {
     return commands.Keys.ToArray();
   }
   
-  // helpers
-  
+  // Helpers
   private string[] GetParameters (string[] input) {
     string[] output = new string[input.Length-1];
     for (int i=0 ; i<output.Length ; i++) {
