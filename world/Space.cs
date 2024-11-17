@@ -31,6 +31,10 @@ class Space : Node {
             Console.WriteLine("There is no one here to talk to.");
         }
     }
+    public List<NPC> GetNPCs()
+    {
+      return npcInSpace;
+    }
 
   // Starts challenges
   public void StartChallenge(Challenge challenge) {

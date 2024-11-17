@@ -57,3 +57,18 @@ C:/Users/andre/Desktop/SemesterProjekt/WorldOfWarTerCraft-/obj/Debug/net8.0/ref/
 /home/quan/Dokumenter/cs/WorldOfWarTerCraft-/obj/Debug/net8.0/WorldOfWarTerCraft-.pdb
 /home/quan/Dokumenter/cs/WorldOfWarTerCraft-/obj/Debug/net8.0/WorldOfWarTerCraft-.genruntimeconfig.cache
 /home/quan/Dokumenter/cs/WorldOfWarTerCraft-/obj/Debug/net8.0/ref/WorldOfWarTerCraft-.dll
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\bin\Debug\net8.0\WorldOfWarTerCraft-.exe
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\bin\Debug\net8.0\WorldOfWarTerCraft-.deps.json
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\bin\Debug\net8.0\WorldOfWarTerCraft-.runtimeconfig.json
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\bin\Debug\net8.0\WorldOfWarTerCraft-.dll
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\bin\Debug\net8.0\WorldOfWarTerCraft-.pdb
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\net8.0\WorldOfWarTerCraft-.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\net8.0\WorldOfWarTerCraft-.AssemblyInfoInputs.cache
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\net8.0\WorldOfWarTerCraft-.AssemblyInfo.cs
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\net8.0\WorldOfWarTerCraft-.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\net8.0\WorldOfWarTerCraft-.sourcelink.json
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\net8.0\WorldOfWarTerCraft-.dll
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\net8.0\refint\WorldOfWarTerCraft-.dll
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\net8.0\WorldOfWarTerCraft-.pdb
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\net8.0\WorldOfWarTerCraft-.genruntimeconfig.cache
+C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\net8.0\ref\WorldOfWarTerCraft-.dll

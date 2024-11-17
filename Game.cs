@@ -14,7 +14,7 @@ class Game {
     registry.Register("bye", cmdExit);
     registry.Register("kill", cmdExit);
     registry.Register("go", new CommandGo());
-    //registry.Register("talk", new CommandNPC());
+    registry.Register("talk", new CommandTalk());
     registry.Register("help", new CommandHelp(registry));
     registry.Register("inventory", new CommandInventory()); 
     registry.Register("inv", new CommandInventory()); 
