@@ -12,7 +12,7 @@ public class Item {
         this.itemID = itemID;
     }
 
-// methods 
+// Methods 
     public string GetName() {
         return name; 
     }
@@ -22,7 +22,9 @@ public class Item {
     public string GetDescription() {
         return description;
     }
+
+    // Displays items for inventory
     public override string ToString() {
-        return $"{name} \t\t {description}";
+        return $"{name} \t {description}";
     }
 }

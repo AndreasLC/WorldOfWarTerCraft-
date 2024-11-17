@@ -1,19 +1,20 @@
 class NPC {
-//Attributes
+// Attributes
     private readonly string nameNPC;
     private readonly string dialog;
 
-//Constructor
+// Constructor
     public NPC (string nameNPC, string dialog){
         this.nameNPC = nameNPC;
         this.dialog = dialog;
     }
 
-//Methods
+// Methods
     public string GetNameNPC(){
         return nameNPC;
     }
 
+    // Displays NPC dialog
     public void Talk() {
         Console.WriteLine($"I'm {nameNPC}! {dialog}");
     }

@@ -5,6 +5,7 @@ class World {
   Space beach ;
   
   private Challenge challenge;
+  private Context context;
   public World () {
     //Adds instances of Rooms
     beach       = new Space("Dirty beach");
@@ -32,80 +33,85 @@ class World {
     NPC npc9          = new NPC("Ian Icefish"         , "Hark Turtle, I am Ian, friend of Casper Clam. For my friend, I searched far and wide for the source of the microplastics. I have come to the conclusion that it is a breakdown of textiles, rubber and wear from other plastics. It is also made when they make other plastics. Go inspire, brave little turtle.");
     NPC npcFin        = new NPC("John Dory"           , "Turtle, I am John Dory. If you want the next generation of turtles to go through less hardships, and trash, you must rally your turtle kin and clean the beach. Be warned, your turtle brethren will require proof of leadership, in the form of knowledge.");
 
-    Challenge ch1     = new Challenge();
-    ch1.AddQuestion(new Question("This is a quiz" , ["1" , "2" , "3" , "4", "5"] , 2));
+    context = new Context(beach);
 
-    Challenge ch2     = new Challenge();
-    ch2.AddQuestion(new Question("This is a quiz" , ["1" , "2" , "3" , "4", "5"] , 2));
+    // Adds all challenges
+    Challenge ch1     = new Challenge(context);
+    ch1.AddQuestion(new Question("This is a quiz1" , ["Forkert" , "Rigtigt" , "Forkert" , "Forkert", "Forkert"] , 2));
 
-    Challenge ch3     = new Challenge();
-    ch3.AddQuestion(new Question("This is a quiz" , ["1" , "2" , "3" , "4", "5"] , 2));
+    Challenge ch2     = new Challenge(context);
+    ch2.AddQuestion(new Question("This is a quiz2" , ["Forkert" , "Forkert" , "Forkert" , "Rigtigt", "Forkert"] , 4));
 
-    Challenge ch4     = new Challenge();
-    ch4.AddQuestion(new Question("This is a quiz" , ["1" , "2" , "3" , "4", "5"] , 2));
+    Challenge ch3     = new Challenge(context);
+    ch3.AddQuestion(new Question("This is a quiz3" , ["Forkert" , "Rigtigt" , "Forkert" , "Forkert", "Forkert"] , 2));
 
-    Challenge ch5     = new Challenge();
-    ch5.AddQuestion(new Question("This is a quiz" , ["1" , "2" , "3" , "4", "5"] , 2));
+    Challenge ch4     = new Challenge(context);
+    ch4.AddQuestion(new Question("This is a quiz4" , ["Forkert" , "Forkert" , "Forkert" , "Forkert", "Rigtigt"] , 5));
 
-    Challenge ch6     = new Challenge();
-    ch6.AddQuestion(new Question("This is a quiz" , ["1" , "2" , "3" , "4", "5"] , 2));
+    Challenge ch5     = new Challenge(context);
+    ch5.AddQuestion(new Question("This is a quiz5" , ["Forkert" , "Forkert" , "Rigtigt" , "Forkert", "Forkert"] , 3));
 
-    Challenge ch7     = new Challenge();
-    ch7.AddQuestion(new Question("This is a quiz" , ["1" , "2" , "3" , "4", "5"] , 2));
+    Challenge ch6     = new Challenge(context);
+    ch6.AddQuestion(new Question("This is a quiz6" , ["Rigtigt" , "Forkert" , "Forkert" , "Forkert", "Forkert"] , 1));
 
-    Challenge ch8     = new Challenge();
-    ch8.AddQuestion(new Question("This is a quiz" , ["1" , "2" , "3" , "4", "5"] , 2));
+    Challenge ch7     = new Challenge(context);
+    ch7.AddQuestion(new Question("This is a quiz7" , ["Forkert" , "Forkert" , "Forkert" , "Forkert", "Rigtigt"] , 5));
 
-    Challenge ch9     = new Challenge();
-    ch9.AddQuestion(new Question("This is a quiz" , ["1" , "2" , "3" , "4", "5"] , 2));
+    Challenge ch8     = new Challenge(context);
+    ch8.AddQuestion(new Question("This is a quiz8" , ["Rigtigt" , "Forkert" , "Forkert" , "Forkert", "Forkert"] , 1));
 
-    Challenge chFin   = new Challenge();
-    chFin.AddQuestion(new Question("This is a quiz" , ["1" , "2" , "3" , "4", "5"] , 2));
+    Challenge ch9     = new Challenge(context);
+    ch9.AddQuestion(new Question("This is a quiz9" , ["Forkert" , "Rigtigt" , "Forkert" , "Forkert", "Forkert"] , 2));
 
-    //world map
+    Challenge chFin   = new Challenge(context);
+    chFin.AddQuestion(new Question("This is a quiz10" , ["Forkert" , "Forkert" , "Forkert" , "Rigtigt", "Forkert"] , 4));
+
+  // World map
     beach.AddEdge("sea", mainBase);
-    //mainBase.AddEdge("home", mainBase);
+
+    //Mainbase
+    mainBase.AddEdge("home", mainBase);
     mainBase.AddEdge("right", room1);
     mainBase.AddEdge("left", room2);
     mainBase.AddEdge("deeper", room4);
 
 
-    //every challenge besides the first one, needs an item to access.
-    mainBase.AddEdge("home", mainBase);
+  // Every challenge besides the first one, needs an item to access.
+    room1.AddEdge("home", mainBase);
 
-    //room2.AddEdge("home", mainBase);
+    room2.AddEdge("home", mainBase);
     room2.AddEdge("deeper", room3);
 
-    //room3.AddEdge("back", room2);
+    room3.AddEdge("back", room2);
     room3.AddEdge("home", mainBase);
     
-    room4.AddEdge("deeper", room5);
+    room4.AddEdge("home", mainBase);
     room4.AddEdge("riptide", room7);
-    //room4.AddEdge("home", mainBase);
+    room4.AddEdge("deeper", room5);
 
-    room5.AddEdge("shipyard", room6);
-    //room5.AddEdge("home", mainBase);
+    room5.AddEdge("home", mainBase);
     room5.AddEdge("back", room4);
+    room5.AddEdge("shipyard", room6);
     room5.AddEdge("caves", room9);
 
-    //room6.AddEdge("home", mainBase);
+    room6.AddEdge("home", mainBase);
     room6.AddEdge("back", room5);
     room6.AddEdge("abyss", room8);
 
-    //room7.AddEdge("home", mainBase);
+    room7.AddEdge("home", mainBase);
     room7.AddEdge("back", room4);
     
-    //room8.AddEdge("home", mainBase);
+    room8.AddEdge("home", mainBase);
     room8.AddEdge("back", room6);
 
-    //room9.AddEdge("home", mainBase);
+    room9.AddEdge("home", mainBase);
     room9.AddEdge("back", room5);
     room9.AddEdge("beach", roomFin);
 
-    //roomFin.AddEdge("home", mainBase);
+    roomFin.AddEdge("home", mainBase);
     roomFin.AddEdge("back", room9);
 
-    //npcs in mainBase
+    // NPCs in spaces
     mainBase.AddNPC(npc1);
     mainBase.AddNPC(npc2); 
     mainBase.AddNPC(npc3); 
@@ -117,18 +123,18 @@ class World {
     mainBase.AddNPC(npc9); 
     mainBase.AddNPC(npcFin);
 
-  //Challenge in world
-  room1.AddChallenge(ch1);
-  room2.AddChallenge(ch2);
-  room3.AddChallenge(ch3);
-  room4.AddChallenge(ch4);
-  room5.AddChallenge(ch5);
-  room6.AddChallenge(ch6);
-  room7.AddChallenge(ch7);
-  room8.AddChallenge(ch8);
-  room9.AddChallenge(ch9);
-  roomFin.AddChallenge(chFin);
-  }
+    // Challenges in world
+    room1.AddChallenge(ch1);
+    room2.AddChallenge(ch2);
+    room3.AddChallenge(ch3);
+    room4.AddChallenge(ch4);
+    room5.AddChallenge(ch5);
+    room6.AddChallenge(ch6);
+    room7.AddChallenge(ch7);
+    room8.AddChallenge(ch8);
+    room9.AddChallenge(ch9);
+    roomFin.AddChallenge(chFin);
+    }
 
   public Space GetBeach() {
     return beach;

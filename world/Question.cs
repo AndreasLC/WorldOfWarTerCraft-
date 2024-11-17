@@ -13,6 +13,7 @@ public class Question {
     }
 
 //Methods
+    // Displays questions for challenges
     public void QuestionDisplay() {
         Console.WriteLine(text);
         for (int i = 0; i < choices.Length; i++) {
@@ -20,6 +21,7 @@ public class Question {
         }
     }
 
+    // Checks for correct answer
     public bool IsCorrect(int choice) {
         return choice == correctAnswer;
     }
