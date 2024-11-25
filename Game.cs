@@ -27,12 +27,15 @@ class Game {
    Console.WriteLine("Welcome to World of Trash!");
    Console.WriteLine();
    Console.WriteLine("You are the mighty sea turtle, your objective is to clean the plastic polluted sea and save the world!");
+   Console.WriteLine($"As a sea turtle in these treacherous waters, you have been granted {context.PlayerHealth} lives. Each wrong answer to a quiz will cost you a life."); 
    Console.WriteLine();
     InitRegistry();
     context.GetCurrent().EnterSpace();
+   
     
-    while (context.IsDone()==false) {
-      Console.WriteLine();
+    while (context.IsDone()==false && context.PlayerHealth>0) {
+      Console.WriteLine(); 
+      Console.WriteLine($"You have a total of {context.PlayerHealth} lives"); 
       string? line = Console.ReadLine();
       Console.WriteLine();
       // Converts input from user to lowercase:)

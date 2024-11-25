@@ -3,7 +3,8 @@
 class Context {
   Space current;
   bool done = false;
-  public Inventory PlayerInventory;  
+  public Inventory PlayerInventory;
+  public int PlayerHealth{get;set;}  =3; 
   
   public Context (Space node) {
   current = node;
@@ -32,5 +33,18 @@ class Context {
   public bool IsDone () {
     return done;
   }
+  // Method for removing lifes in challenge.
+   public void RemoveLifes()
+    {
+        PlayerHealth --; // Gets context player health wich is set to 3 and deducts 1 everytime it runs. 
+        Console.WriteLine("you lost a life, you now have "+ PlayerHealth + " lives left!");  
+        if(PlayerHealth <=0) // If lifes get to 0 call method MakeDone wich execute the game. 
+        { 
+        Console.WriteLine("womp womp you lost all your lives");
+       }
+    }
+
+
 }
+
 

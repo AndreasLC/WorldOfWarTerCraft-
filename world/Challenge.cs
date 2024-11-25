@@ -30,7 +30,11 @@ class Challenge {
                 }
                 else {
                     Console.WriteLine("Incorrect, try again!");
-                      /* (Add a function here subtracting hp) */
+                    Game.context.RemoveLifes(); /* (Add a function here subtracting hp) */
+                    if(Game.context.PlayerHealth<=0)
+                    {
+                        break; 
+                    }
                 }
             } 
         
