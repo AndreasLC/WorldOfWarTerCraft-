@@ -1,4 +1,4 @@
-class NPC {
+public class NPC {
 // Attributes
     private readonly string nameNPC;
     private readonly string dialog;

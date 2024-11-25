@@ -2,24 +2,74 @@
  */
 
 class World {
-  Space beach ;
-  
-  private Challenge challenge;
-  private Context context;
-  public World () {
+  private Space beach;
+  private Context context; 
+  public World (Context context) {
+    this.context = context; 
+    // Initializing all Items
+Item item1 = new Item("Bottle cap", "Ingested by marine life, leading to injuries and contributing to microplastics.", 1);
+Item item2 = new Item("Plastic bag", "Causes suffocation and digestive blockages in sea turtles and other creatures.", 2);
+Item item3 = new Item("Fishing gear", "Abandoned gear entangles marine animals, causing injury and death.", 3);
+Item item4 = new Item("Plastic straw", "Blockages and harm from ingestion by marine animals.", 4);
+Item item5 = new Item("Cigarettes", "Toxic chemicals leach into the water, harming marine life.", 5);
+Item item6 = new Item("Balloon", "Balloons and their strings cause ingestion and entanglement in marine creatures.", 6);
+Item item7 = new Item("Styrofoam box", "Breaks into small particles, causing ingestion and toxic exposure.", 7);
+Item item8 = new Item("Wrapper", "Contributes to microplastics and is ingested by marine animals.", 8);
+Item item9 = new Item("Cutlery", "Ingested by marine life, causing internal damage and environmental pollution.", 9);
+Item item10 = new Item("Gill net", "Entangles and kills marine life, continuing to harm even when abandoned.", 10);
+
+    // Intializing a list that holds all Items
+    List<Item> items = new List<Item>
+{
+    item1,
+    item2,
+    item3,
+    item4,
+    item5,
+    item6,
+    item7,
+    item8,
+    item9,
+    item10
+};   
+    // Initalizing Questions ADD QUESTIONS ABOUT PLASTIC WASTE IN THE SEA!!
+    Question question1 = new Question("This is a quiz1" , ["Forkert" , "Rigtigt" , "Forkert" , "Forkert", "Forkert"] , 2);
+    Question question2 = new Question("What is the capital of France?" , ["Paris", "Rome", "Berlin", "Madrid", "Lisbon"], 1);
+    Question question3 = new Question("Which planet is known as the Red Planet?" , ["Earth", "Venus", "Mars", "Jupiter", "Saturn"], 3);
+    Question question4 = new Question("What is the largest ocean on Earth?" , ["Indian", "Pacific", "Atlantic", "Arctic", "Southern"], 2);
+    Question question5 = new Question("Who wrote 'Romeo and Juliet'?" , ["Shakespeare", "Dickens", "Austen", "Hemingway", "Tolkien"], 1);
+    Question question6 = new Question("What is the smallest prime number?" , ["1", "2", "3", "4", "5"], 2);
+    Question question7 = new Question("Which country is famous for sushi?" , ["Thailand", "China", "Korea", "Japan", "Vietnam"], 4);
+    Question question8 = new Question("What is the square root of 64?" , ["6", "7", "8", "9", "10"], 3);
+    Question question9 = new Question("Which element has the chemical symbol 'O'?" , ["Oxygen", "Gold", "Silver", "Iron", "Copper"], 1);
+    Question question10 = new Question("Who painted the Mona Lisa?" , ["Van Gogh", "Picasso", "Da Vinci", "Michelangelo", "Rembrandt"], 3);
+
+    // Initalizing Challenges with their given Reward Item. 
+    Challenge challenge1 = new Challenge (context, question1 , item1);
+    Challenge challenge2 = new Challenge(context,question2 , item2);
+    Challenge challenge3 = new Challenge(context,question3 , item3);
+    Challenge challenge4 = new Challenge(context,question4 , item4);
+    Challenge challenge5 = new Challenge(context,question5 , item5);
+    Challenge challenge6 = new Challenge(context,question6 , item6);
+    Challenge challenge7 = new Challenge(context,question7 , item7);
+    Challenge challenge8 = new Challenge(context,question8 , item8);
+    Challenge challenge9 = new Challenge(context,question9 , item9);
+    Challenge challenge10 = new Challenge(context,question10 , item10);
+
+
     //Adds instances of Rooms
     beach       = new Space("Dirty beach");
     Space mainBase    = new Space("Coralreef remains");
-    Space room1       = new Space("Polluted Paradise");
-    Space room2       = new Space("Plastic bottoms");
-    Space room3       = new Space("Sandy loam");
-    Space room4       = new Space("Rip current");
-    Space room5       = new Space("Sargasso Sea of Waste");
-    Space room6       = new Space("Sunken shipyard");
-    Space room7       = new Space("Plastic trench");
-    Space room8       = new Space("The Shimmering Trash Abyss");
-    Space room9       = new Space("Hidden Plastic Parasite");
-    Space roomFin     = new Space("Clean beach");
+    Space room1       = new Space("Polluted Paradise" , challenge1);
+    Space room2       = new Space("Plastic bottoms" , challenge2);
+    Space room3       = new Space("Sandy loam" , challenge3);
+    Space room4       = new Space("Rip current" , challenge4);
+    Space room5       = new Space("Sargasso Sea of Waste" , challenge5);
+    Space room6       = new Space("Sunken shipyard" , challenge6);
+    Space room7       = new Space("Plastic trench" , challenge7);
+    Space room8       = new Space("The Shimmering Trash Abyss" , challenge8);
+    Space room9       = new Space("Hidden Plastic Parasite" , challenge9);
+    Space roomFin     = new Space("Clean beach" , challenge10);
 
     //Adds instances of NPC
     NPC npc1          = new NPC("Ariel Angler"        , "Ahoy Skipper I’m Ariel Angler, but you can just call me Ariel. Now you might have noticed that these seas and waters have a whole lotta plastic in ‘em. Now would you believe that around 12 million tons get thrown in the ocean, each year? That’s like, a lot.");
@@ -32,39 +82,6 @@ class World {
     NPC npc8          = new NPC("Harold Herring"      , "Turtle, i am Harold. I have worked with my kin, and we have quite precisely worked out that 67% of pollution in the sea, comes from Asia. So brave turtle, if you value your life, do not go near the seas of Asia.");
     NPC npc9          = new NPC("Ian Icefish"         , "Hark Turtle, I am Ian, friend of Casper Clam. For my friend, I searched far and wide for the source of the microplastics. I have come to the conclusion that it is a breakdown of textiles, rubber and wear from other plastics. It is also made when they make other plastics. Go inspire, brave little turtle.");
     NPC npcFin        = new NPC("John Dory"           , "Turtle, I am John Dory. If you want the next generation of turtles to go through less hardships, and trash, you must rally your turtle kin and clean the beach. Be warned, your turtle brethren will require proof of leadership, in the form of knowledge.");
-
-    context = new Context(beach);
-
-    // Adds all challenges
-    Challenge ch1     = new Challenge(context);
-    ch1.AddQuestion(new Question("This is a quiz1" , ["Forkert" , "Rigtigt" , "Forkert" , "Forkert", "Forkert"] , 2));
-
-    Challenge ch2     = new Challenge(context);
-    ch2.AddQuestion(new Question("This is a quiz2" , ["Forkert" , "Forkert" , "Forkert" , "Rigtigt", "Forkert"] , 4));
-
-    Challenge ch3     = new Challenge(context);
-    ch3.AddQuestion(new Question("This is a quiz3" , ["Forkert" , "Rigtigt" , "Forkert" , "Forkert", "Forkert"] , 2));
-
-    Challenge ch4     = new Challenge(context);
-    ch4.AddQuestion(new Question("This is a quiz4" , ["Forkert" , "Forkert" , "Forkert" , "Forkert", "Rigtigt"] , 5));
-
-    Challenge ch5     = new Challenge(context);
-    ch5.AddQuestion(new Question("This is a quiz5" , ["Forkert" , "Forkert" , "Rigtigt" , "Forkert", "Forkert"] , 3));
-
-    Challenge ch6     = new Challenge(context);
-    ch6.AddQuestion(new Question("This is a quiz6" , ["Rigtigt" , "Forkert" , "Forkert" , "Forkert", "Forkert"] , 1));
-
-    Challenge ch7     = new Challenge(context);
-    ch7.AddQuestion(new Question("This is a quiz7" , ["Forkert" , "Forkert" , "Forkert" , "Forkert", "Rigtigt"] , 5));
-
-    Challenge ch8     = new Challenge(context);
-    ch8.AddQuestion(new Question("This is a quiz8" , ["Rigtigt" , "Forkert" , "Forkert" , "Forkert", "Forkert"] , 1));
-
-    Challenge ch9     = new Challenge(context);
-    ch9.AddQuestion(new Question("This is a quiz9" , ["Forkert" , "Rigtigt" , "Forkert" , "Forkert", "Forkert"] , 2));
-
-    Challenge chFin   = new Challenge(context);
-    chFin.AddQuestion(new Question("This is a quiz10" , ["Forkert" , "Forkert" , "Forkert" , "Rigtigt", "Forkert"] , 4));
 
   // World map
     beach.AddEdge("sea", mainBase);
@@ -122,19 +139,7 @@ class World {
     mainBase.AddNPC(npc8); 
     mainBase.AddNPC(npc9); 
     mainBase.AddNPC(npcFin);
-
-    // Challenges in world
-    room1.AddChallenge(ch1);
-    room2.AddChallenge(ch2);
-    room3.AddChallenge(ch3);
-    room4.AddChallenge(ch4);
-    room5.AddChallenge(ch5);
-    room6.AddChallenge(ch6);
-    room7.AddChallenge(ch7);
-    room8.AddChallenge(ch8);
-    room9.AddChallenge(ch9);
-    roomFin.AddChallenge(chFin);
-    }
+  }
 
   public Space GetBeach() {
     return beach;

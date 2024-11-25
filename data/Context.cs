@@ -3,11 +3,11 @@
 class Context {
   Space current;
   bool done = false;
-  public Inventory PlayerInventory {get; set;}
+  public Inventory PlayerInventory;  
   
   public Context (Space node) {
-    current = node;
-    PlayerInventory = new Inventory();
+  current = node;
+  PlayerInventory = new Inventory(new List<Item>()); // Starting with an empty inventory
   }
   
   public Space GetCurrent() {

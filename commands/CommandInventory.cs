@@ -7,7 +7,7 @@ class CommandInventory : BaseCommand, ICommand
     // Display inventory
     public void Execute(Context context, string command, string[] parameters)
     {
-        Inventory inventory = context.PlayerInventory; // Calls inventory in context 
+        Inventory inventory = context.PlayerInventory; // Calls inventory in Game.context 
 
         inventory.InventoryDisplay();
     }

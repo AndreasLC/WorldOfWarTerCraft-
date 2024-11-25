@@ -5,18 +5,19 @@ class Space : Node {
   private Challenge challenge;
   private List<NPC> npcInSpace = new List<NPC>(); 
 
-// Constructor
-  public Space(string name) : base(name) {}
+// Constructor for creating space without challenges and items.
+  public Space(string name) : base(name){}
+// Constructor for creating space with challenge.
+  public Space (string name , Challenge challenge):base(name)
+  {
+    this.challenge = challenge; 
+  }
+
 
 // Methods
   // Adds NPCs to spaces
   public void AddNPC(NPC npc) {
       npcInSpace.Add(npc);
-  }
-
-  // Adds challenges to spaces
-  public void AddChallenge(Challenge challenge) {
-      this.challenge = challenge;
   }
 
   // Displays NPCs in space
@@ -59,6 +60,7 @@ class Space : Node {
     Console.WriteLine($"You are now at {name}"); // Displays name of space
     while (challenge != null) { // Checks for challenges in space
       StartChallenge(challenge); // Starts challenge immediatly and has to be completed for method to continue
+      challenge=null; // After challenge is startet it i immediately removes from the space, so the challenge dosent start again. 
     };
     DisplayExits(); 
     ListNPCs();
