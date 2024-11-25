@@ -89,31 +89,33 @@ Item item10 = new Item("Gill net", "Entangles and kills marine life, continuing 
     //Mainbase
     mainBase.AddEdge("home", mainBase);
     mainBase.AddEdge("right", room1);
-    mainBase.AddEdge("left", room2);
-    mainBase.AddEdge("deeper", room4);
+    mainBase.AddEdge("left", room2, item1);
+    mainBase.AddEdge("deeper", room4, item3);
 
 
   // Every challenge besides the first one, needs an item to access.
     room1.AddEdge("home", mainBase);
 
     room2.AddEdge("home", mainBase);
-    room2.AddEdge("deeper", room3);
+    room2.AddEdge("back", mainBase);
+    room2.AddEdge("deeper", room3, item2);
 
-    room3.AddEdge("back", room2);
     room3.AddEdge("home", mainBase);
+    room3.AddEdge("back", room2);
     
     room4.AddEdge("home", mainBase);
-    room4.AddEdge("riptide", room7);
-    room4.AddEdge("deeper", room5);
+    room4.AddEdge("back", mainBase);
+    room4.AddEdge("riptide", room7, item6);
+    room4.AddEdge("deeper", room5, item4);
 
     room5.AddEdge("home", mainBase);
     room5.AddEdge("back", room4);
-    room5.AddEdge("shipyard", room6);
-    room5.AddEdge("caves", room9);
+    room5.AddEdge("shipyard", room6, item5);
+    room5.AddEdge("caves", room9, item8);
 
     room6.AddEdge("home", mainBase);
     room6.AddEdge("back", room5);
-    room6.AddEdge("abyss", room8);
+    room6.AddEdge("abyss", room8, item7);
 
     room7.AddEdge("home", mainBase);
     room7.AddEdge("back", room4);
@@ -123,10 +125,7 @@ Item item10 = new Item("Gill net", "Entangles and kills marine life, continuing 
 
     room9.AddEdge("home", mainBase);
     room9.AddEdge("back", room5);
-    room9.AddEdge("beach", roomFin);
-
-    roomFin.AddEdge("home", mainBase);
-    roomFin.AddEdge("back", room9);
+    room9.AddEdge("beach", roomFin, item9);
 
     // NPCs in spaces
     mainBase.AddNPC(npc1);

@@ -2,8 +2,9 @@
 
 class Space : Node {
 // Constructor
-  private Challenge challenge;
+  private Challenge? challenge;
   private List<NPC> npcInSpace = new List<NPC>(); 
+  private Dictionary<string, Item> requiredItems = new Dictionary<string, Item>();
 
 // Constructor for creating space without challenges and items.
   public Space(string name) : base(name){}
@@ -12,7 +13,6 @@ class Space : Node {
   {
     this.challenge = challenge; 
   }
-
 
 // Methods
   // Adds NPCs to spaces
@@ -60,17 +60,29 @@ class Space : Node {
     Console.WriteLine($"You are now at {name}"); // Displays name of space
     while (challenge != null) { // Checks for challenges in space
       StartChallenge(challenge); // Starts challenge immediatly and has to be completed for method to continue
-      challenge=null; // After challenge is startet it i immediately removes from the space, so the challenge dosent start again. 
+      challenge = null;
     };
     DisplayExits(); 
     ListNPCs();
   }
   
-  public static void Goodbye () {
+  // Adds an edge with an optional required item
+  public void AddEdge(string direction, Space target, Item? requiredItem = null) {
+    base.AddEdge(direction, target);
+      if (requiredItem != null) {
+        requiredItems[direction] = requiredItem;
+      }
   }
-  
-  // Go to new space
-  public override Space FollowEdge (string direction) {
-    return (Space) base.FollowEdge(direction);
+  public override Node FollowEdge(string direction) {
+    if (requiredItems.ContainsKey(direction)) {
+      Item requiredItem = requiredItems[direction];
+        if (!Game.context.PlayerInventory.HasItem(requiredItem.GetItemID())) {
+          Console.WriteLine($"You need the {requiredItem.GetName()} to go {direction}.");
+          return this;
+        }
+      }
+    return base.FollowEdge(direction);
+  }
+  public static void Goodbye () {
   }
 }
