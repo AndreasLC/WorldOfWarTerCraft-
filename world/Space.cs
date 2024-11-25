@@ -1,7 +1,6 @@
 /* Space class for modeling spaces, challenges and npcs */
 
 class Space : Node {
-// Constructor
   private Challenge? challenge;
   private List<NPC> npcInSpace = new List<NPC>(); 
   private Dictionary<string, Item> requiredItems = new Dictionary<string, Item>();
