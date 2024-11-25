@@ -15,6 +15,7 @@ class Challenge {
         
     }
     public void BeginChallenge(Challenge challenge) {
+            Inventory inventory = Game.context.PlayerInventory;
             bool answeredCorrectly = false; // Loops the method until answered correctly
             while(!answeredCorrectly && !context.IsDone()){
                 question.QuestionDisplay();
@@ -22,18 +23,17 @@ class Challenge {
                 if (question.IsCorrect(inputUser)){
                    
                     Console.WriteLine($"Your knowledge is increasing, you succesfully picked up the trash!");
-                    Game.context.PlayerInventory.AddItem(item); // Adds rewarditem to inventory at game.context. 
-                    Game.context.PlayerInventory.InventoryDisplay(); // shows inventory
+                    inventory.AddItem(item); // Adds rewarditem to inventory at game.context. 
+                    inventory.InventoryDisplay(); // shows inventory
                     Console.WriteLine();
                     answeredCorrectly = true; // Exits the loop when answered correctly
-                    break;
                 }
                 else {
                     Console.WriteLine("Incorrect, try again!");
                     Game.context.RemoveLifes(); /* (Add a function here subtracting hp) */
                     if(Game.context.PlayerHealth<=0)
                     {
-                        break; 
+                        return; 
                     }
                 }
             } 
