@@ -21,6 +21,10 @@ class Game {
   }
   
   static void Main (string[] args) {
+    int actionsCount = ConsoleReader.GetActionsCount(); // Initializes actionsCount
+    int maxActions = 25; // Maximum allowed actions
+    int actionsWarning = 10; // Warning amount
+
     context = new Context(null); 
     world = new World(context);
     context= new Context(world.GetBeach()); 
@@ -29,21 +33,18 @@ class Game {
     Console.WriteLine("Welcome to World of Trash!");
     Console.WriteLine();
     Console.WriteLine("You are the mighty sea turtle, your objective is to clean the plastic polluted sea and save the world!");
-    Console.WriteLine($"As a sea turtle in these treacherous waters, you have been granted {context.PlayerHealth} lives. Each wrong answer to a quiz will cost you a life."); 
+    Console.WriteLine($"As a sea turtle in these treacherous waters, you have been granted {maxActions} actions and {context.PlayerHealth} lives. Each wrong answer to a quiz will cost you a life."); 
     Console.WriteLine();
     InitRegistry();
     context.GetCurrent().EnterSpace();
     
     while (context.IsDone()==false && context.PlayerHealth>0) {
-      int actionsCount = ConsoleReader.GetActionsCount(); // Initializes actionsCount
-      int maxActions = 25;
-      int actionsWarning = 10;
       Console.WriteLine(); 
       string? line = ConsoleReader.ReadLine();
       Console.WriteLine();
       line = line.ToLower(); // Converts input from user to lowercase
       if (line!=null) registry.Dispatch(line);
-      // Gives the player a warning when actionsCount is x amount from maxActions
+      // Gives the player a warning when actionsCount is actionsWarning amount from maxActions
       if (maxActions - actionsWarning == actionsCount) {
         Console.WriteLine();
         Console.WriteLine($"Time is running out, you have a total of {maxActions - actionsCount} actions left!");
