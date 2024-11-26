@@ -8,8 +8,7 @@ class Space : Node {
 // Constructor for creating space without challenges and items.
   public Space(string name) : base(name){}
 // Constructor for creating space with challenge.
-  public Space (string name , Challenge challenge):base(name)
-  {
+  public Space (string name , Challenge challenge):base(name) {
     this.challenge = challenge; 
   }
 
@@ -23,18 +22,26 @@ class Space : Node {
   public void ListNPCs() {
     if (npcInSpace.Count > 0) {
       Console.WriteLine("You see the following people here:");
-        foreach (var npc in npcInSpace) {
+      foreach (var npc in npcInSpace) {
         Console.WriteLine($" - {npc.GetNameNPC()}"); // Example (" - testNPC")
         }
-    } 
-      else {
-            Console.WriteLine("There is no one here to talk to.");
-        }
+    } else {
+      Console.WriteLine("There is no one here to talk to.");
     }
-    public List<NPC> GetNPCs()
-    {
-      return npcInSpace;
+  }
+  public List<NPC> GetNPCs() {
+    return npcInSpace;
+  }
+
+  public void TalkToNPC(string npcName) {
+    // Find the first NPC whose name contains the input string
+    NPC? npc = npcInSpace.FirstOrDefault(n => n.GetNameNPC().IndexOf(npcName, StringComparison.OrdinalIgnoreCase) >= 0);
+    if (npc != null) {
+        npc.Talk();
+    } else {
+        Console.WriteLine($"There is no one here named '{npcName}'.");
     }
+  }
 
   // Starts challenges
   public void StartChallenge(Challenge challenge) {
