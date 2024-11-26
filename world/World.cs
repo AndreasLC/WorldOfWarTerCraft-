@@ -1,37 +1,30 @@
 /* World class for modeling the entire in-game world
  */
 
+
+
 class World {
   private Space beach;
   private Context context; 
   public World (Context context) {
     this.context = context; 
     // Initializing all Items
-Item item1 = new Item("Bottle cap", "Ingested by marine life, leading to injuries and contributing to microplastics.", 1);
-Item item2 = new Item("Plastic bag", "Causes suffocation and digestive blockages in sea turtles and other creatures.", 2);
-Item item3 = new Item("Fishing gear", "Abandoned gear entangles marine animals, causing injury and death.", 3);
-Item item4 = new Item("Plastic straw", "Blockages and harm from ingestion by marine animals.", 4);
-Item item5 = new Item("Cigarettes", "Toxic chemicals leach into the water, harming marine life.", 5);
-Item item6 = new Item("Balloon", "Balloons and their strings cause ingestion and entanglement in marine creatures.", 6);
-Item item7 = new Item("Styrofoam box", "Breaks into small particles, causing ingestion and toxic exposure.", 7);
-Item item8 = new Item("Wrapper", "Contributes to microplastics and is ingested by marine animals.", 8);
-Item item9 = new Item("Cutlery", "Ingested by marine life, causing internal damage and environmental pollution.", 9);
-Item item10 = new Item("Gill net", "Entangles and kills marine life, continuing to harm even when abandoned.", 10);
+    Item item1 = new Item("Bottle cap", "Ingested by marine life, leading to injuries and contributing to microplastics.", 1);
+    Item item2 = new Item("Plastic bag", "Causes suffocation and digestive blockages in sea turtles and other creatures.", 2);
+    Item item3 = new Item("Fishing gear", "Abandoned gear entangles marine animals, causing injury and death.", 3);
+    Item item4 = new Item("Plastic straw", "Blockages and harm from ingestion by marine animals.", 4);
+    Item item5 = new Item("Cigarettes", "Toxic chemicals leach into the water, harming marine life.", 5);
+    Item item6 = new Item("Balloon", "Balloons and their strings cause ingestion and entanglement in marine creatures.", 6);
+    Item item7 = new Item("Styrofoam box", "Breaks into small particles, causing ingestion and toxic exposure.", 7);
+    Item item8 = new Item("Wrapper", "Contributes to microplastics and is ingested by marine animals.", 8);
+    Item item9 = new Item("Cutlery", "Ingested by marine life, causing internal damage and environmental pollution.", 9);
+    Item item10 = new Item("Gill net", "Entangles and kills marine life, continuing to harm even when abandoned.", 10);
 
     // Intializing a list that holds all Items
-    List<Item> items = new List<Item>
-{
-    item1,
-    item2,
-    item3,
-    item4,
-    item5,
-    item6,
-    item7,
-    item8,
-    item9,
-    item10
-};   
+    List<Item> items = new List<Item> {
+    item1, item2, item3, item4, item5, item6, item7, item8, item9, item10
+    };   
+    
     // Initalizing Questions ADD QUESTIONS ABOUT PLASTIC WASTE IN THE SEA!!
     Question question1 = new Question("This is a quiz1" , ["Forkert" , "Rigtigt" , "Forkert" , "Forkert", "Forkert"] , 2);
     Question question2 = new Question("What is the capital of France?" , ["Paris", "Rome", "Berlin", "Madrid", "Lisbon"], 1);
@@ -142,5 +135,9 @@ Item item10 = new Item("Gill net", "Entangles and kills marine life, continuing 
 
   public Space GetBeach() {
     return beach;
+  }
+
+  public static implicit operator World(string v) {
+    throw new NotImplementedException();
   }
 }

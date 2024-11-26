@@ -4,13 +4,13 @@ public class NPC {
     private readonly string dialog;
 
 // Constructor
-    public NPC (string nameNPC, string dialog){
+    public NPC (string nameNPC, string dialog) {
         this.nameNPC = nameNPC;
         this.dialog = dialog;
     }
 
 // Methods
-    public string GetNameNPC(){
+    public string GetNameNPC() {
         return nameNPC;
     }
 

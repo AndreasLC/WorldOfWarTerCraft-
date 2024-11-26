@@ -23,22 +23,20 @@ public Inventory (List<Item> items)
     // Display inventory
     public void InventoryDisplay()
     {        
-    Console.WriteLine("Inventory:");
-    Console.WriteLine("Name \t\t" + "| " + "Description");
-    Console.WriteLine(new string('-', 16) + "┴" + new string('-', 79));
-    if (items.Any()) 
-    { 
-        foreach (var item in items)
-        Console.WriteLine(item);
+        Console.WriteLine("Inventory:");
+        Console.WriteLine("Name \t\t" + "| " + "Description");
+        Console.WriteLine(new string('-', 16) + "┴" + new string('-', 79));
+        if (items.Any()) { 
+            foreach (var item in items)
+            Console.WriteLine(item);
+        } else {
+            Console.WriteLine("Inventory was empty");
+        }
+            Console.WriteLine();  
     }
-    else 
-    {
-        Console.WriteLine("Inventory was empty");
-    }
-        Console.WriteLine();  
-    }
+
     // Checks if player has the item
     public bool HasItem(int keyNumber) {
         return items.Any(item => item.GetItemID() == keyNumber);
-        }
+    }
 }
