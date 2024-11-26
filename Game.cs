@@ -1,5 +1,4 @@
-/* Main class for launching the game
- */
+/* Main class for launching the game */
 
 class Game {
   public static Context ?context; 
