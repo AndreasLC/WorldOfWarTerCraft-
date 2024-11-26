@@ -48,7 +48,7 @@ class Game {
         Console.WriteLine();
         Console.WriteLine($"Time is running out, you have a total of {maxActions - actionsCount} actions left!");
       }
-      // The player will die when reaching a total of 50 actions
+      // The player will die when reaching maxActions
       if (actionsCount == maxActions) {
         Console.WriteLine();
         Console.WriteLine("You used too many actions and got entangled in a fishing net...");
