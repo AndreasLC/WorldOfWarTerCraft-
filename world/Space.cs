@@ -32,17 +32,6 @@ class Space : Node {
   public List<NPC> GetNPCs() {
     return npcInSpace;
   }
-
-  public void TalkToNPC(string npcName) {
-    // Find the first NPC whose name contains the input string
-    NPC? npc = npcInSpace.FirstOrDefault(n => n.GetNameNPC().IndexOf(npcName, StringComparison.OrdinalIgnoreCase) >= 0);
-    if (npc != null) {
-        npc.Talk();
-    } else {
-        Console.WriteLine($"There is no one here named '{npcName}'.");
-    }
-  }
-
   // Starts challenges
   public void StartChallenge(Challenge challenge) {
     if (challenge != null) {
