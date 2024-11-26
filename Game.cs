@@ -1,5 +1,7 @@
 /* Main class for launching the game */
 
+using System.Net;
+
 class Game {
   public static Context ?context; 
   static World ?world; 
@@ -33,17 +35,33 @@ class Game {
     context.GetCurrent().EnterSpace();
     
     while (context.IsDone()==false && context.PlayerHealth>0) {
+      int actionsCount = ConsoleReader.GetActionsCount(); // Initializes actionsCount
+      int maxActions = 25;
+      int actionsWarning = 10;
       Console.WriteLine(); 
-      string? line = Console.ReadLine();
+      string? line = ConsoleReader.ReadLine();
       Console.WriteLine();
-      // Converts input from user to lowercase:)
-      line = line.ToLower();
+      line = line.ToLower(); // Converts input from user to lowercase
       if (line!=null) registry.Dispatch(line);
+      // Gives the player a warning when actionsCount is x amount from maxActions
+      if (maxActions - actionsWarning == actionsCount) {
+        Console.WriteLine();
+        Console.WriteLine($"Time is running out, you have a total of {maxActions - actionsCount} actions left!");
+      }
+      // The player will die when reaching a total of 50 actions
+      if (actionsCount == maxActions) {
+        Console.WriteLine();
+        Console.WriteLine("You used too many actions and got entangled in a fishing net...");
+        break;
+      }
+      // The player completes the game when picking up the last item
       if (context.PlayerInventory.HasItem(10)) {
+        Console.WriteLine();
         Console.WriteLine("Congratulations you have completed the game and saved the ocean!");
+        Console.WriteLine($"You used a total of {actionsCount} actions throughout the game"); // Displays amount of actions used when completing the game
         return;
       }
     }
-    Console.WriteLine("You died");
+    Console.WriteLine("You died"); // Death message
   }
 }
