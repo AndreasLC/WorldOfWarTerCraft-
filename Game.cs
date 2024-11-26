@@ -1,12 +1,11 @@
-/* Main class for launching the game
- */
+/* Main class for launching the game */
 
 class Game {
-  public static Context? context; 
-  static World? world; 
+  public static Context ?context; 
+  static World ?world; 
   
   static ICommand fallback = new CommandUnknown();
-  static Registry? registry; 
+  static Registry ?registry; 
   
   private static void InitRegistry () {
     ICommand cmdExit = new CommandExit();
@@ -30,10 +29,10 @@ class Game {
     Console.WriteLine("You are the mighty sea turtle, your objective is to clean the plastic polluted sea and save the world!");
     Console.WriteLine($"As a sea turtle in these treacherous waters, you have been granted {context.PlayerHealth} lives. Each wrong answer to a quiz will cost you a life."); 
     Console.WriteLine();
+    InitRegistry();
+    context.GetCurrent().EnterSpace();
     
-    while (context.IsDone()==false && context.PlayerHealth > 0) {
-      InitRegistry();
-      context.GetCurrent().EnterSpace();
+    while (context.IsDone()==false && context.PlayerHealth>0) {
       Console.WriteLine(); 
       string? line = Console.ReadLine();
       Console.WriteLine();
@@ -41,9 +40,9 @@ class Game {
       line = line.ToLower();
       if (line!=null) registry.Dispatch(line);
       if (context.PlayerInventory.HasItem(10)) {
-        Console.WriteLine("Congrats you beat the game and cleaned up the beach!");
-      return; // Returns to stop the game after collecting the last item
-    }
+        Console.WriteLine("Congratulations you have completed the game and saved the ocean!");
+        return;
+      }
     }
     Console.WriteLine("You died");
   }
