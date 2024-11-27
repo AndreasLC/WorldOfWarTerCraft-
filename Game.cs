@@ -21,10 +21,10 @@ class Game {
   }
   
   static void Main (string[] args) {
-    int actionsCount = ConsoleReader.GetActionsCount(); // Initializes actionsCount
     int maxActions = 25; // Maximum allowed actions
-    int actionsWarning = 10; // Warning amount
-
+    int actionsWarning = 10; // Warning left amount
+    
+    int actionsCount = ConsoleReader.GetActionsCount(); // Initializes actionsCount
     context = new Context(null); 
     world = new World(context);
     context= new Context(world.GetBeach()); 
@@ -33,7 +33,7 @@ class Game {
     Console.WriteLine("Welcome to World of Trash!");
     Console.WriteLine();
     Console.WriteLine("You are the mighty sea turtle, your objective is to clean the plastic polluted sea and save the world!");
-    Console.WriteLine($"As a sea turtle in these treacherous waters, you have been granted {maxActions} actions and {context.PlayerHealth} lives. Each wrong answer to a quiz will cost you a life."); 
+    Console.WriteLine($"As a sea turtle in these treacherous waters, you have been granted a total of {maxActions} actions and {context.PlayerHealth} lives. Each wrong answer to a quiz will cost you a life."); 
     Console.WriteLine();
     InitRegistry();
     context.GetCurrent().EnterSpace();
