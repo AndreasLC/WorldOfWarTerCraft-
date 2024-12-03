@@ -23,7 +23,7 @@ class Challenge {
                 Console.WriteLine($"Your knowledge is increasing, you succesfully picked up the trash!");
                 inventory.AddItem(item); // Adds rewarditem to inventory at game.context. 
                 inventory.InventoryDisplay(); // shows inventory
-                Console.WriteLine($"You now have {context.PlayerHealth} lives left!");
+                Console.WriteLine($"You now have {Game.context.PlayerHealth} lives left!");
                 Console.WriteLine();
                 answeredCorrectly = true; // Exits the loop when answered correctly
             } else {
