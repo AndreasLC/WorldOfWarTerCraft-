@@ -30,11 +30,11 @@ class World {
     Question question2 = new Question("How much does fishing gear pollute the oceans, primarily fishing nets?" , ["0.6", "0.7", "0.8", "0.9", "0.1"], 1);
     Question question3 = new Question("How much microplastic goes in the ocean each year?" , ["1.0", "1.4", "1.5", "1.7", "2.1"], 3);
     Question question4 = new Question("How much plastic goes in the ocean with water runoff?" , ["1.02-2.19", "1.15-2.41", "1.32-2.68", "2.12-2.52", "0.90-1.88"], 2);
-    Question question5 = new Question("Who wrote 'Romeo and Juliet'?" , ["Shakespeare", "Dickens", "Austen", "Hemingway", "Tolkien"], 1);
-    Question question6 = new Question("What is the smallest prime number?" , ["1", "2", "3", "4", "5"], 2);
-    Question question7 = new Question("Which country is famous for sushi?" , ["Thailand", "China", "Korea", "Japan", "Vietnam"], 4);
+    Question question5 = new Question("What river is the most polluted with plastic of them all?" , ["Yangtze", "Ganges", "Nile", "Amazon", "Gondor"], 1);
+    Question question6 = new Question("What countrys pollutes the most plastic waste into the ocean? The order of the two countries does not matter." , ["China, USA", "China, India", "India, USA", "USA, Germany", "India, Germany"], 2);
+    Question question7 = new Question("How much accumulated plastic waste is in our oceans?" , ["220", "230", "245", "260", "275"], 4);
     Question question8 = new Question("What is the square root of 64?" , ["6", "7", "8", "9", "10"], 3);
-    Question question9 = new Question("Which element has the chemical symbol 'O'?" , ["Oxygen", "Gold", "Silver", "Iron", "Copper"], 1);
+    Question question9 = new Question("How much microplastic waste are the result of secondary microplast? The answer is in tons." , ["68.500-275.000", "70.000-290.500", "72.400-280.600", "66.000-260.500", "65.500-260.000"], 1);
     Question question10 = new Question("Who painted the Mona Lisa?" , ["Van Gogh", "Picasso", "Da Vinci", "Michelangelo", "Rembrandt"], 3);
 
     // Initalizing Challenges with their given Reward Item. 
@@ -70,10 +70,10 @@ class World {
     NPC npc3          = new NPC("Casper Clam"         , "Greeting turtle my name is Casper, Casper Clam, I will keep this short. There is a lot of microplastics in the ocean, a whole 1.5 million tons find their way here each year. From what Ariel told me, that would be 12.5%, so be aware of the invisible killer plastic.");
     NPC npc4          = new NPC("Danny Dolphin"       , "Hey-hey turtle, Danny here. Now i’ve been swimming far and wide, and I’ve seen the plastic on land with my very own eyes. Here’s the kicker though, when it rains, or storms come in, can you guess where all that plastic ends up? That’s right, here with us, in the ocean. From what my Dolphin brothers have gathered, its anywhere from 1.15 to 2.41 million tons, each year from runoff.");
     NPC npc5          = new NPC("Egor Eel"            , "Ah, turtle, come for the knowledge i hold? Well let me tell you, my name is Egor, I was born in the Yangtze river. Let me tell you, it was the most polluted, plastic ridden river I have EVER seen. So I counted for a year, and about 300 thousand tons of plastic passes through that river and into the ocean. Each year of course.");
-    NPC npc6          = new NPC("Ferb Flying fish"    , "Hi, I’m Ferb, or so the others call me. I’ve been flying, as you might have guessed, and I have seen, a lot. The main polluters of our glorious and beautiful ocean are Asia first, then Africa second. Hope it helps ya.");
+    NPC npc6          = new NPC("Ferb Flying fish"    , "Hi, I’m Ferb. I’ve been flying, as you might have guessed, and I have seen, a lot. The main polluters of our glorious and beautiful oceans are Asia first, then Africa second.  With China being the main polluter followed by India.");
     NPC npc7          = new NPC("Gahat Ganges shark"  , "I am the wise Gahat, i am a Ganges shark. Ariel has told you how much plastic we get each year, now I am here to tell you what we already have. The oceans have around 260 millions tons of plastic. Now go turtle, and come back ever so slightly more wise.");
     NPC npc8          = new NPC("Harold Herring"      , "Turtle, i am Harold. I have worked with my kin, and we have quite precisely worked out that 67% of pollution in the sea, comes from Asia. So brave turtle, if you value your life, do not go near the seas of Asia.");
-    NPC npc9          = new NPC("Ian Icefish"         , "Hark Turtle, I am Ian, friend of Casper Clam. For my friend, I searched far and wide for the source of the microplastics. I have come to the conclusion that it is a breakdown of textiles, rubber and wear from other plastics. It is also made when they make other plastics. Go inspire, brave little turtle.");
+    NPC npc9          = new NPC("Ian Icefish"         , "Hark Turtle, I am Ian, friend of Casper Clam. For my friend, I searched far and wide for the source of the microplastics. I have come to the conclusion that it is a breakdown of textiles, rubber and wear from other plastics. It is also made when they make other plastics. These are called secondary microplastics, and it accounts for 68.500-275.000 tons of plastic.");
     NPC npcFin        = new NPC("John Dory"           , "Turtle, I am John Dory. If you want the next generation of turtles to go through less hardships, and trash, you must rally your turtle kin and clean the beach. Be warned, your turtle brethren will require proof of leadership, in the form of knowledge.");
 
   // World map
