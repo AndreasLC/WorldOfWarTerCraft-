@@ -9,6 +9,7 @@ class CommandHelp : BaseCommand, ICommand {
   }
   
   public void Execute (Context context, string command, string[] parameters) {
+    Space currentSpace = context.GetCurrent();
     string[] commandNames = registry.GetCommandNames();
     Array.Sort(commandNames);
     
@@ -25,5 +26,7 @@ class CommandHelp : BaseCommand, ICommand {
       string description = registry.GetCommand(commandName).GetDescription();
       Console.WriteLine(" - {0,-"+max+"} "+description, commandName);
     }
+    Console.WriteLine();
+    currentSpace.DisplayExits();
   }
 }

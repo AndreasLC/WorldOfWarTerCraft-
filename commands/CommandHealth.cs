@@ -6,6 +6,11 @@ class CommandHealth : BaseCommand, ICommand
     }
     // Display health
     public void Execute(Context context, string command, string[] parameters) {
+        Space currentSpace = context.GetCurrent();
+
         Console.WriteLine($"You have a total of {context.PlayerHealth} lives");
+        
+        Console.WriteLine();
+        currentSpace.DisplayExits();
     }
 }
