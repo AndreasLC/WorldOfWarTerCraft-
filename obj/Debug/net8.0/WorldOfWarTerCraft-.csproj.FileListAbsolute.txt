@@ -72,3 +72,17 @@ C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\ne
 C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\net8.0\WorldOfWarTerCraft-.pdb
 C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\net8.0\WorldOfWarTerCraft-.genruntimeconfig.cache
 C:\Users\andre\Desktop\SemesterProjekt Repository\WorldOfWaterTrash\obj\Debug\net8.0\ref\WorldOfWarTerCraft-.dll
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\bin\Debug\net8.0\WorldOfWarTerCraft-.exe
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\bin\Debug\net8.0\WorldOfWarTerCraft-.deps.json
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\bin\Debug\net8.0\WorldOfWarTerCraft-.runtimeconfig.json
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\bin\Debug\net8.0\WorldOfWarTerCraft-.dll
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\bin\Debug\net8.0\WorldOfWarTerCraft-.pdb
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\obj\Debug\net8.0\WorldOfWarTerCraft-.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\obj\Debug\net8.0\WorldOfWarTerCraft-.AssemblyInfoInputs.cache
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\obj\Debug\net8.0\WorldOfWarTerCraft-.AssemblyInfo.cs
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\obj\Debug\net8.0\WorldOfWarTerCraft-.csproj.CoreCompileInputs.cache
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\obj\Debug\net8.0\WorldOfWarTerCraft-.dll
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\obj\Debug\net8.0\refint\WorldOfWarTerCraft-.dll
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\obj\Debug\net8.0\WorldOfWarTerCraft-.pdb
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\obj\Debug\net8.0\WorldOfWarTerCraft-.genruntimeconfig.cache
+C:\Users\kontu\Desktop\WorldOfWaterTrash-Revert-commit\obj\Debug\net8.0\ref\WorldOfWarTerCraft-.dll
