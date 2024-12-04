@@ -3,8 +3,8 @@
 using System.Net;
 
 class Game {
-  public static Context ?context; 
-  static World ?world; 
+  public static Context? context; 
+  static World? world; 
   
   static ICommand fallback = new CommandUnknown();
   static Registry ?registry; 
@@ -21,14 +21,16 @@ class Game {
   }
   
   static void Main (string[] args) {
-    int maxActions = 25; // Maximum allowed actions
-    int actionsWarning = 10; // Warning left amount
-    
-    int actionsCount = ConsoleReader.GetActionsCount(); // Initializes actionsCount
+    int maxActions = 70; // Maximum allowed actions, has to be >10
+    int actionsWarning = maxActions - 10;
     context = new Context(null); 
     world = new World(context);
-    context= new Context(world.GetBeach()); 
+    context= new Context(world.GetRiver()); 
     registry = new Registry (context , fallback); 
+    
+    // Initialize blue background
+    Console.BackgroundColor = ConsoleColor.Blue;
+    Console.Clear();
 
     Console.WriteLine("Welcome to World of Trash!");
     Console.WriteLine();
@@ -39,13 +41,15 @@ class Game {
     context.GetCurrent().EnterSpace();
     
     while (context.IsDone()==false && context.PlayerHealth>0) {
+      int actionsCount = ConsoleReader.GetActionsCount(); // Initializes actionsCount
       Console.WriteLine(); 
       string? line = ConsoleReader.ReadLine();
       Console.WriteLine();
       line = line.ToLower(); // Converts input from user to lowercase
+      Console.Clear();
       if (line!=null) registry.Dispatch(line);
       // Gives the player a warning when actionsCount is actionsWarning amount from maxActions
-      if (maxActions - actionsWarning == actionsCount) {
+      if (actionsWarning == actionsCount) {
         Console.WriteLine();
         Console.WriteLine($"Time is running out, you have a total of {maxActions - actionsCount} actions left!");
       }
