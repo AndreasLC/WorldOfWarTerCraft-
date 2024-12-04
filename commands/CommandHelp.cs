@@ -27,6 +27,6 @@ class CommandHelp : BaseCommand, ICommand {
       Console.WriteLine(" - {0,-"+max+"} "+description, commandName);
     }
     Console.WriteLine();
-    currentSpace.DisplayExits();
+    currentSpace.EnterSpace();
   }
 }

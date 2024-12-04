@@ -11,6 +11,6 @@ class CommandHealth : BaseCommand, ICommand
         Console.WriteLine($"You have a total of {context.PlayerHealth} lives");
         
         Console.WriteLine();
-        currentSpace.DisplayExits();
+        currentSpace.EnterSpace();
     }
 }

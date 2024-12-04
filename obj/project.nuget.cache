@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OmnpClwMhlw=",
+  "dgSpecHash": "yIdjakiLHf4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kontu\\Desktop\\WorldOfWaterTrash-Revert-commit\\WorldOfWarTerCraft-.csproj",
+  "projectFilePath": "C:\\Users\\kontu\\Desktop\\WorldOfWaterTrash-master\\WorldOfWarTerCraft-.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kontu\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.8\\microsoft.netcore.app.ref.8.0.8.nupkg.sha512",
     "C:\\Users\\kontu\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.8\\microsoft.windowsdesktop.app.ref.8.0.8.nupkg.sha512",

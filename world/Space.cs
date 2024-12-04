@@ -25,8 +25,6 @@ class Space : Node {
       foreach (var npc in npcInSpace) {
         Console.WriteLine($" - {npc.GetNameNPC()}"); // Example (" - testNPC")
         }
-    } else {
-      Console.WriteLine("There is no one here to talk to.");
     }
   }
   public List<NPC> GetNPCs() {
@@ -44,7 +42,7 @@ class Space : Node {
     }
 
   // Displays all exits in space
-  public void DisplayExits() {
+  private void DisplayExits() {
     HashSet<string> exits = edges.Keys.ToHashSet();
     Console.WriteLine("Current exits are:");
     foreach (string exit in exits) {

@@ -10,6 +10,6 @@ class CommandInventory : BaseCommand, ICommand
         Inventory inventory = context.PlayerInventory; // Calls inventory in Game.context 
 
         inventory.InventoryDisplay();
-        currentSpace.DisplayExits();
+        currentSpace.EnterSpace();
     }
 }

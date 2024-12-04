@@ -6,6 +6,6 @@ class CommandUnknown : BaseCommand, ICommand {
     Console.WriteLine("I don't understand '"+command+"', type 'help' for commands");
     
     Console.WriteLine();
-    currentSpace.DisplayExits();
+    currentSpace.EnterSpace();
   }
 }

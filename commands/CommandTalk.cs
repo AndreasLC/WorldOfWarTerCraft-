@@ -26,6 +26,6 @@ class CommandTalk : BaseCommand, ICommand
         Console.WriteLine($"There is no one named {npcName} in this room.");
     }
     Console.WriteLine();
-    currentSpace.DisplayExits();
+    currentSpace.EnterSpace();
     }
 }

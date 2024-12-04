@@ -30,6 +30,7 @@ class Game {
     
     // Initialize blue background
     Console.BackgroundColor = ConsoleColor.Blue;
+    Console.ForegroundColor = ConsoleColor.White;
     Console.Clear();
 
     Console.WriteLine("Welcome to World of Trash!");

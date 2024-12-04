@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kontu\\Desktop\\WorldOfWaterTrash-Revert-commit\\WorldOfWarTerCraft-.csproj",
+      "projectUniqueName": "C:\\Users\\kontu\\Desktop\\WorldOfWaterTrash-master\\WorldOfWarTerCraft-.csproj",
       "projectName": "WorldOfWarTerCraft-",
-      "projectPath": "C:\\Users\\kontu\\Desktop\\WorldOfWaterTrash-Revert-commit\\WorldOfWarTerCraft-.csproj",
+      "projectPath": "C:\\Users\\kontu\\Desktop\\WorldOfWaterTrash-master\\WorldOfWarTerCraft-.csproj",
       "packagesPath": "C:\\Users\\kontu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kontu\\Desktop\\WorldOfWaterTrash-Revert-commit\\obj\\",
+      "outputPath": "C:\\Users\\kontu\\Desktop\\WorldOfWaterTrash-master\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kontu\\AppData\\Roaming\\NuGet\\NuGet.Config",

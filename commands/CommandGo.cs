@@ -9,7 +9,7 @@ class CommandGo : BaseCommand, ICommand {
   try {
     if (GuardEq(parameters, 1)) {Console.WriteLine("Room doesn't exist...");
       Console.WriteLine();
-      currentSpace.DisplayExits();
+      currentSpace.EnterSpace();
       return;
     }
     context.Transition(parameters[0]);
@@ -17,7 +17,7 @@ class CommandGo : BaseCommand, ICommand {
   catch (KeyNotFoundException) {
     Console.WriteLine("Wrong input try again");
     Console.WriteLine();
-    currentSpace.DisplayExits();
+    currentSpace.EnterSpace();
     }
   }
 }
