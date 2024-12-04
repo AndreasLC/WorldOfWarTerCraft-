@@ -40,12 +40,13 @@ class Challenge {
     private int GetInputUser() {
         int choice;
         while (true) {
-            Console.WriteLine("Enter your answer: (Choose number between 1 and 5)");
-            string? input = Console.ReadLine();
-            if (int.TryParse(input, out choice) && choice >= 1 && choice <= 5) {
+            Console.WriteLine();
+            Console.WriteLine("Enter your answer: (Choose number between 1 and 4)");
+            string? input = ConsoleReader.ReadLine();
+            if (int.TryParse(input, out choice) && choice >= 1 && choice <= 4) {
                 break;
             } else {
-                Console.WriteLine("Try again, please enter a number between 1 and 5.");
+                Console.WriteLine("Try again, please enter a number between 1 and 4.");
             }
         }
         return choice;

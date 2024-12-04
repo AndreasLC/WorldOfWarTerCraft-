@@ -32,6 +32,7 @@ class Space : Node {
   public List<NPC> GetNPCs() {
     return npcInSpace;
   }
+
   // Starts challenges
   public void StartChallenge(Challenge challenge) {
     if (challenge != null) {
@@ -43,7 +44,7 @@ class Space : Node {
     }
 
   // Displays all exits in space
-  private void DisplayExits() {
+  public void DisplayExits() {
     HashSet<string> exits = edges.Keys.ToHashSet();
     Console.WriteLine("Current exits are:");
     foreach (string exit in exits) {

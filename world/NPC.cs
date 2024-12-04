@@ -16,6 +16,6 @@ public class NPC {
 
     // Displays NPC dialog
     public void Talk() {
-        Console.WriteLine($"I'm {nameNPC}! \n{dialog}");
+        Console.WriteLine($"{nameNPC}: \n{dialog}");
     }
 }
