@@ -24,9 +24,9 @@ public Inventory (List<Item> items)
     public void InventoryDisplay()
     {        
         Console.WriteLine("Inventory:");
-        Console.WriteLine("Name \t\t" + "| " + "Description");
-        Console.WriteLine(new string('-', 16) + "┴" + new string('-', 79));
         if (items.Any()) { 
+            Console.WriteLine("Name \t\t" + "│ " + "Description");
+            Console.WriteLine(new string('═', 16) + "╪" + new string('═', 79));
             foreach (var item in items)
             Console.WriteLine(item);
         } else {

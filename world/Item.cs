@@ -25,6 +25,6 @@ public class Item {
 
     // Displays items for inventory
     public override string ToString() {
-        return $"{name} \t {description}";
+        return $"{name} \t│ {description}";
     }
 }
