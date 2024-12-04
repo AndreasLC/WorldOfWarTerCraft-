@@ -1,9 +1,9 @@
 public class Item {
 
 // Atributes 
-    private string name;
-    private string description;
-    private int itemID;
+    private readonly string name;
+    private readonly string description;
+    private readonly int itemID;
 
 // Constructor
     public Item(string name , string description , int itemID) {

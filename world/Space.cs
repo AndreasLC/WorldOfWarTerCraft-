@@ -2,8 +2,8 @@
 
 class Space : Node {
   private Challenge? challenge;
-  private List<NPC> npcInSpace = new List<NPC>(); 
-  private Dictionary<string, Item> requiredItems = new Dictionary<string, Item>();
+  private readonly List<NPC> npcInSpace = []; 
+  private readonly Dictionary<string, Item> requiredItems = [];
 
 // Constructor for creating space without challenges and items.
   public Space(string name) : base(name){}
@@ -32,7 +32,7 @@ class Space : Node {
   }
 
   // Starts challenges
-  public void StartChallenge(Challenge challenge) {
+  public static void StartChallenge(Challenge challenge) {
     if (challenge != null) {
       Console.WriteLine("You have found a new challenge!");
       challenge.BeginChallenge(challenge);
@@ -55,6 +55,9 @@ class Space : Node {
     while (challenge != null) { // Checks for challenges in space
       StartChallenge(challenge); // Starts challenge immediatly and has to be completed for method to continue
       challenge = null;
+      if (Game.context.PlayerHealth <= 0) {
+        return;
+      }
     };
     DisplayExits(); 
     ListNPCs();

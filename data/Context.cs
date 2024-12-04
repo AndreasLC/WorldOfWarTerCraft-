@@ -8,7 +8,7 @@ class Context {
   
   public Context (Space node) {
     current = node;
-    PlayerInventory = new Inventory(new List<Item>()); // Starting with an empty inventory
+    PlayerInventory = new([]); // Starting with an empty inventory
   }
   
   public Space GetCurrent() {
@@ -33,12 +33,15 @@ class Context {
   public bool IsDone () {
     return done;
   }
-  // Method for removing lifes in challenge.
+  // Method for removing lives in challenge.
   public void RemoveLifes() {
-    PlayerHealth --; // Gets context player health wich is set to 3 and deducts 1 everytime it runs. 
-    Console.WriteLine("You lost a life, you now have "+ PlayerHealth + " lives left!");  
-    if(PlayerHealth <=0) { // If lifes get to 0 call method MakeDone wich execute the game.  
+    PlayerHealth --; // Gets context player health which is set to 3 and deducts 1 everytime it runs. 
+    if(PlayerHealth <=0) { // If lives get to 0 call method MakeDone wich execute the game.  
+      Console.BackgroundColor = ConsoleColor.DarkRed;
+      Console.Clear();
       Console.WriteLine("You lost all your lives, better luck next time! :)");
+      return;
     }
+    Console.WriteLine($"You lost a life, you now have {PlayerHealth} lives left!");  
   }
 }

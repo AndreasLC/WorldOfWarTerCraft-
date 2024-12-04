@@ -2,9 +2,9 @@
 class Challenge {
 
 // Attributes
-    private Question question;
-    private Item item; 
-    private Context context;
+    private readonly Question question;
+    private readonly Item item; 
+    private readonly Context context;
 
 // Constructor
     // Adds a list of question
@@ -27,9 +27,11 @@ class Challenge {
                 Console.WriteLine();
                 answeredCorrectly = true; // Exits the loop when answered correctly
             } else {
-                Console.WriteLine("Incorrect, try again!");
+                Console.Clear();
                 Game.context.RemoveLifes(); /* (Add a function here subtracting hp) */
-                if(Game.context.PlayerHealth<=0) {
+                if (Game.context.PlayerHealth >= 1) {
+                    Console.WriteLine("Incorrect, try again!");
+                } else {
                     return; 
                 }
             }
@@ -37,7 +39,7 @@ class Challenge {
         
     }
     // Reads the input from user and checks for syntax errors
-    private int GetInputUser() {
+    private static int GetInputUser() {
         int choice;
         while (true) {
             Console.WriteLine();

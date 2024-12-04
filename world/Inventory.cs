@@ -1,7 +1,7 @@
 
 public class Inventory {
 // Atriburtes
-private List<Item> items;
+private readonly List<Item> items;
 
 // Constructor
 public Inventory (List<Item> items)
@@ -32,7 +32,7 @@ public Inventory (List<Item> items)
         } else {
             Console.WriteLine("Inventory was empty");
         }
-            Console.WriteLine();  
+        Console.WriteLine();  
     }
 
     // Checks if player has the item

@@ -8,9 +8,7 @@ class CommandHealth : BaseCommand, ICommand
     public void Execute(Context context, string command, string[] parameters) {
         Space currentSpace = context.GetCurrent();
 
-        Console.WriteLine($"You have a total of {context.PlayerHealth} lives");
-        
-        Console.WriteLine();
+        Console.WriteLine($"You have a total of {context.PlayerHealth} lives\n");
         currentSpace.EnterSpace();
     }
 }

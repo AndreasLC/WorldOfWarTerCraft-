@@ -3,13 +3,13 @@
 
 class Node {
   protected string name;
-  protected Dictionary<string, Node> edges = new Dictionary<string, Node>();
+  protected Dictionary<string, Node> edges = [];
   
   public Node (string name) {
     this.name = name;
   }
   
-  public String GetName () {
+  public string GetName () {
     return name;
   }
   

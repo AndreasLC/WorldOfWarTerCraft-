@@ -7,16 +7,14 @@ class CommandGo : BaseCommand, ICommand {
   public void Execute (Context context, string command, string[] parameters) {
   Space currentSpace = context.GetCurrent();
   try {
-    if (GuardEq(parameters, 1)) {Console.WriteLine("Room doesn't exist...");
-      Console.WriteLine();
+    if (GuardEq(parameters, 1)) {Console.WriteLine("Room doesn't exist...\n");
       currentSpace.EnterSpace();
       return;
     }
     context.Transition(parameters[0]);
   }
   catch (KeyNotFoundException) {
-    Console.WriteLine("Wrong input try again");
-    Console.WriteLine();
+    Console.WriteLine("Wrong input try again\n");
     currentSpace.EnterSpace();
     }
   }

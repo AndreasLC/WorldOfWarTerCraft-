@@ -2,9 +2,9 @@
  */
 
 class Registry {
-  Context context;
-  ICommand fallback;
-  Dictionary<string, ICommand> commands = new Dictionary<string, ICommand>();
+  readonly Context context;
+  readonly ICommand fallback;
+  readonly Dictionary<string, ICommand> commands = [];
   
   public Registry (Context context, ICommand fallback) {
     this.context = context;
