@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yIdjakiLHf4=",
+  "dgSpecHash": "Oj0M6JuU4Lg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kontu\\Desktop\\WorldOfWaterTrash-master\\WorldOfWarTerCraft-.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\kontu\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.8\\microsoft.netcore.app.ref.8.0.8.nupkg.sha512",
-    "C:\\Users\\kontu\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.8\\microsoft.windowsdesktop.app.ref.8.0.8.nupkg.sha512",
-    "C:\\Users\\kontu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.8\\microsoft.aspnetcore.app.ref.8.0.8.nupkg.sha512",
-    "C:\\Users\\kontu\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.8\\microsoft.netcore.app.host.win-x64.8.0.8.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\andre\\Desktop\\SemesterProjekt Repository\\WorldOfWaterTrash\\WorldOfWarTerCraft-.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
