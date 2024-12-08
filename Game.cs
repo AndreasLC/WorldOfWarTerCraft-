@@ -19,7 +19,7 @@ class Game {
   }
   
   static void Main () {
-    int maxActions = 60; // Maximum allowed actions, has to be >10
+    int maxActions = 50; // Maximum allowed actions, has to be >10
     int actionsWarning = maxActions - 10;
     context = new Context(null); 
     world = new World(context);
