@@ -1,6 +1,6 @@
 
 public class Inventory {
-// Atriburtes
+// Attributes
 private readonly List<Item> items;
 
 // Constructor

@@ -1,4 +1,3 @@
-/* World class for modeling the entire in-game world */
 class World {
   private readonly Space river;
   private readonly Context context; 
@@ -182,9 +181,5 @@ class World {
 
   public Space GetRiver() {
     return river;
-  }
-
-  public static implicit operator World(string v) {
-    throw new NotImplementedException();
   }
 }

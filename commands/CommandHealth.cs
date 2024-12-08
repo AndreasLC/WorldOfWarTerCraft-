@@ -1,4 +1,4 @@
-/* Command for displaying inventory */
+/* Command for displaying health */
 class CommandHealth : BaseCommand, ICommand
 {
     public CommandHealth() {

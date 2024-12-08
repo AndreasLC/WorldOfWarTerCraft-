@@ -1,5 +1,3 @@
-/* Space class for modeling spaces, challenges and npcs */
-
 class Space : Node {
   private Challenge? challenge;
   private readonly List<NPC> npcInSpace = []; 
@@ -23,7 +21,7 @@ class Space : Node {
     if (npcInSpace.Count > 0) {
       Console.WriteLine("You see the following people here:");
       foreach (var npc in npcInSpace) {
-        Console.WriteLine($" - {npc.GetNameNPC()}"); // Example (" - testNPC")
+        Console.WriteLine($" - {npc.GetNameNPC()}");
         }
     }
   }
@@ -54,7 +52,7 @@ class Space : Node {
     Console.WriteLine($"You are now at {name}"); // Displays name of space
     while (challenge != null) { // Checks for challenges in space
       StartChallenge(challenge); // Starts challenge immediatly and has to be completed for method to continue
-      challenge = null;
+      challenge = null; // Removes challenge after completion 
       if (Game.context.PlayerHealth <= 0) {
         return;
       }

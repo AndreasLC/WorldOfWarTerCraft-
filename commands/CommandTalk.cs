@@ -1,5 +1,3 @@
-using System.Transactions;
-
 class CommandTalk : BaseCommand, ICommand
 {
     public CommandTalk()

@@ -1,9 +1,6 @@
-/* Main class for launching the game */
-
 class Game {
   public static Context? context; 
   static World? world; 
-  
   static readonly ICommand fallback = new CommandUnknown();
   static Registry ?registry; 
   

@@ -13,7 +13,7 @@ class CommandGo : BaseCommand, ICommand {
     }
     context.Transition(parameters[0]);
   }
-  catch (KeyNotFoundException) {
+  catch (KeyNotFoundException) { // Prevents the user for crashing the game if correct input go is used but wrong direction. 
     Console.WriteLine("Wrong input try again\n");
     currentSpace.EnterSpace();
     }
