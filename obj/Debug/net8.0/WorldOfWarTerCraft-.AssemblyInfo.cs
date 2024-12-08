@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorldOfWarTerCraft-")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1e47394bb9ef55cf29063b3d08dd4fef054a081")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3886ffc414719e50cd3c913e00e6399582d571f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorldOfWarTerCraft-")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorldOfWarTerCraft-")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
