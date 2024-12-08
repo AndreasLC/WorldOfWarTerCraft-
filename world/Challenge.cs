@@ -16,7 +16,7 @@ class Challenge {
     public void BeginChallenge(Challenge challenge) {
         Inventory inventory = Game.context.PlayerInventory;
         bool answeredCorrectly = false; // Loops the method until answered correctly
-        while(!answeredCorrectly && !context.IsDone()) {
+        while(!answeredCorrectly) {
             question.QuestionDisplay();
             int inputUser = GetInputUser();
             if (question.IsCorrect(inputUser)) {
@@ -28,7 +28,7 @@ class Challenge {
                 answeredCorrectly = true; // Exits the loop when answered correctly
             } else {
                 Console.Clear();
-                Game.context.RemoveLifes(); /* (Add a function here subtracting hp) */
+                Game.context.RemoveLifes(); // Function removes 1 life from player
                 if (Game.context.PlayerHealth >= 1) {
                     Console.WriteLine("Incorrect, try again!");
                 } else {

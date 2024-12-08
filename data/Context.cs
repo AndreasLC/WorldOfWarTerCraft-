@@ -36,7 +36,7 @@ class Context {
   // Method for removing lives in challenge.
   public void RemoveLifes() {
     PlayerHealth --; // Gets context player health which is set to 3 and deducts 1 everytime it runs. 
-    if(PlayerHealth <=0) { // If lives get to 0 call method MakeDone wich execute the game.  
+    if(PlayerHealth <=0) { // If lives get to 0 set the commandbackground color to red indicating that you lost the game.  
       Console.BackgroundColor = ConsoleColor.DarkRed;
       Console.Clear();
       Console.WriteLine("You lost all your lives, better luck next time! :)");
